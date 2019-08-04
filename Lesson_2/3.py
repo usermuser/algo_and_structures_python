@@ -13,8 +13,6 @@ def rev(num):
         num = num // 10
     return s
 
-print(f'Cycle result: {rev(num)}')
-
 
 def recursion(num, s=''):
     if num < 1:
@@ -23,5 +21,6 @@ def recursion(num, s=''):
     return recursion((num // 10), s)
 
 
+print(f'Cycle result: {rev(num)}')
 print(f'Recursion result: {recursion(num)}')
 
