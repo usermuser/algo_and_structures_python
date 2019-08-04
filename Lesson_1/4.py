@@ -38,6 +38,7 @@ print(low_sym, up_sym)
 # get digital representation of characters
 low_sym = ord(low_sym)
 up_sym = ord(up_sym)
+
 randy = random.random() * (up_sym - low_sym)
 result_ord = round(randy + low_sym)
 print(f'result_ord: {result_ord}')
