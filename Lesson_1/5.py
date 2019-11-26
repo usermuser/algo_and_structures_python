@@ -1,19 +1,23 @@
 #5.	Пользователь вводит две буквы. Определить, на каких местах
 # алфавита они стоят, и сколько между ними находится букв.
 
-letter1 = input('Please input any latin letter: ')
-letter2 = input('Please input any latin letter: ')
+try:
+    letter1 = ord(input('Please input any latin letter: '))
+    letter2 = ord(input('Please input any latin letter: '))
+except:    # don't use bare except!
+    print('Please, next time enter latin letters... bye')
+    quit()
 
-# to get position of letter we need to convert it to ascii code and substitute the offset
+if letter1 == letter2:
+    print('You entered equal letters... bye')
+    quit()
+
 ascii_offset = 96
-pos1 = ord(letter1) - ascii_offset
-pos2 = ord(letter2) - ascii_offset
+pos1 = letter1 - ascii_offset
+pos2 = letter2 - ascii_offset
 
-print(f'position of \'{letter1}\' is {pos1} and position of \'{letter2}\' is {pos2}')
+print(f'positions are: {pos1} and {pos2}')
+print(f'beetween them we have {abs(pos2-pos1)} letters')
 
-if pos2 > pos1:
-    print(f'between them we see {pos2 - pos1} other letters')
-else:
-    print(f'between them we have {pos1 - pos2} other letters')
 
 
