@@ -13,10 +13,10 @@ import random
 ########### task with integers ###########
 randint_low = int(input('Please enter lower limit for integers: '))
 randint_up = int(input('Please enter upper for integers: '))
-rand_int = round(random.random())
+rand_int = random.random()
 
 # apply our range
-int_result = (rand_int * (randint_up - randint_low)) + randint_low
+int_result = round((rand_int * (randint_up - randint_low)) + randint_low)
 print(f'Random integer number in range {randint_low} - {randint_up} is: {int_result}')
 
 
